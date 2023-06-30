@@ -1,0 +1,11 @@
+@media screen and (min-width: 576px) {
+  .StepperContainer-0-2-1 {
+    flex-direction: column !important;
+  }
+  #RFS-ConnectorContainer {
+    display: none;
+  }
+  main {
+    display: flex;
+  }
+}
