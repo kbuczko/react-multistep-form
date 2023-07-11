@@ -1,4 +1,4 @@
-@media screen and (min-width: 576px) {
+/* @media screen and (min-width: 576px) {
   .StepperContainer-0-2-1 {
     flex-direction: column !important;
   }
@@ -8,4 +8,27 @@
   main {
     display: flex;
   }
+}
+ */
+
+.StepperContainer-0-2-1 {
+  background-image: url("../images/bg-sidebar-mobile.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+#StepButton-0-2-4,
+.StepButton-d2-0-2-8.completed,
+.StepButton-d6-0-2-12.completed,
+.StepButton-d10-0-2-22.completed,
+.StepButton-d14-0-2-30.completed {
+  background-color: transparent !important;
+  border: 1px solid white !important;
+}
+
+.StepButton-d2-0-2-8.active,
+.StepButton-d6-0-2-12.active,
+.StepButton-d10-0-2-22.active,
+.StepButton-d14-0-2-30.active {
+  background-color: hsl(228, 100%, 84%) !important;
 }

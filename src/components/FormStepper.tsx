@@ -25,11 +25,11 @@ const FormStepper = () => {
   };
   return (
     <main>
-      <Stepper activeStep={1}>
-        <Step label="Step 1" />
-        <Step label="Step 2" />
-        <Step label="Step 3" />
-        <Step label="Step 4" />
+      <Stepper activeStep={activeStep}>
+        <Step />
+        <Step />
+        <Step />
+        <Step />
       </Stepper>
       {getSectionComponent()}
       {activeStep !== 0 && (
