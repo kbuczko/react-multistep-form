@@ -1,4 +1,4 @@
-@media screen and (min-width: 576px) {
+/* @media screen and (min-width: 576px) {
   .StepperContainer-0-2-1 {
     flex-direction: column !important;
   }
@@ -8,4 +8,40 @@
   main {
     display: flex;
   }
+}
+ */
+
+.StepperContainer-0-2-1 {
+  min-width: 320px;
+  height: 100px;
+  background-image: url("../images/bg-sidebar-mobile.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+.StepButton-0-2-4,
+.StepButton-d2-0-2-8.completed,
+.StepButton-d6-0-2-12.completed,
+.StepButton-d10-0-2-22.completed,
+.StepButton-d14-0-2-30.completed {
+  background-color: transparent !important;
+  border: 1px solid white !important;
+}
+
+.StepButton-0-2-4.active {
+  background-color: hsl(228, 100%, 84%) !important;
+}
+
+.stepper-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  padding: 1em;
+}
+
+.stepper-nav button:last-child {
+  margin-left: auto;
 }

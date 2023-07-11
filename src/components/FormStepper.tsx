@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {Stepper, Step} from "react-form-stepper";
-import PersonalInfo from "./Steps/PersonalInfo";
+import PersonalInfo from "./Steps/Step1/PersonalInfo";
 import SelectPlan from "./Steps/SelectPlan";
 import Addons from "./Steps/Addons";
 import Finish from "./Steps/Finish";
@@ -25,19 +25,23 @@ const FormStepper = () => {
   };
   return (
     <main>
-      <Stepper activeStep={1}>
-        <Step label="Step 1" />
-        <Step label="Step 2" />
-        <Step label="Step 3" />
-        <Step label="Step 4" />
+      <Stepper activeStep={activeStep}>
+        <Step onClick={() => setActiveStep(0)} />
+        <Step onClick={() => setActiveStep(1)} />
+        <Step onClick={() => setActiveStep(2)} />
+        <Step onClick={() => setActiveStep(3)} />
       </Stepper>
       {getSectionComponent()}
-      {activeStep !== 0 && (
-        <button onClick={() => setActiveStep(activeStep - 1)}>Previous</button>
-      )}
-      {activeStep !== 3 && (
-        <button onClick={() => setActiveStep(activeStep + 1)}>Next</button>
-      )}
+      <div className="stepper-nav">
+        {activeStep !== 0 && (
+          <button onClick={() => setActiveStep(activeStep - 1)}>Go Back</button>
+        )}
+        {activeStep !== 3 && (
+          <button onClick={() => setActiveStep(activeStep + 1)}>
+            Next Step
+          </button>
+        )}
+      </div>
     </main>
   );
 };
