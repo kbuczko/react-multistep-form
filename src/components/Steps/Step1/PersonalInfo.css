@@ -1,8 +1,13 @@
 input {
   display: block;
-  margin-block-start: 1em;
+  margin-block-end: 1em;
   width: 100%;
   height: 30px;
+}
+
+label {
+  color: hsl(213, 96%, 18%);
+  font-size: 14px;
 }
 
 .info__wrapper {
@@ -15,4 +20,13 @@ input {
   position: relative;
   top: -30px;
   padding: 2em 1em;
+}
+
+.info__description {
+  margin-block: 1em;
+  color: hsl(231, 11%, 63%);
+}
+
+.info__header {
+  color: hsl(213, 96%, 18%);
 }

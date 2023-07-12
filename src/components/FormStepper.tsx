@@ -32,12 +32,20 @@ const FormStepper = () => {
         <Step onClick={() => setActiveStep(3)} />
       </Stepper>
       {getSectionComponent()}
-      <div className="stepper-nav">
+      <div className="stepper__nav">
         {activeStep !== 0 && (
-          <button onClick={() => setActiveStep(activeStep - 1)}>Go Back</button>
+          <button
+            className="stepper__nav__back-btn"
+            onClick={() => setActiveStep(activeStep - 1)}
+          >
+            Go Back
+          </button>
         )}
         {activeStep !== 3 && (
-          <button onClick={() => setActiveStep(activeStep + 1)}>
+          <button
+            className="stepper__nav__btn"
+            onClick={() => setActiveStep(activeStep + 1)}
+          >
             Next Step
           </button>
         )}
