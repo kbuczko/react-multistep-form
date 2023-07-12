@@ -1,0 +1,9 @@
+.confirm__wrapper {
+  text-align: center;
+}
+
+.confirm__icon {
+  width: 52px;
+  height: 52px;
+  margin-block: 2em 1em;
+}

@@ -1,0 +1,30 @@
+.whatever {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  width: 100%;
+  margin-block-end: 1em;
+  padding: 1em;
+  border: 1px solid gray;
+  border-radius: 0.5em;
+}
+
+.d-block {
+  display: block;
+}
+
+.addon__title {
+  color: hsl(213, 96%, 18%);
+}
+
+.addon__description {
+  font-size: 12px;
+  color: gray;
+}
+
+.addon__price {
+  display: inline-block;
+  margin-left: auto;
+  font-size: 12px;
+  color: purple;
+}

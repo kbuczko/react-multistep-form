@@ -1,0 +1,29 @@
+.plan__wrapper {
+  display: flex;
+  align-items: center;
+  padding-block: 0.5em;
+  border-bottom: 1px solid rgb(183, 182, 182);
+}
+
+.plan__wrapper * span {
+  display: block;
+}
+
+.plan__price {
+  margin-left: auto;
+}
+
+.finish__wrapper {
+  padding: 0.5em 1em;
+  background-color: hsl(217, 100%, 97%);
+}
+
+.addon__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.finish__total {
+  padding: 2em 1em 0 1em;
+}

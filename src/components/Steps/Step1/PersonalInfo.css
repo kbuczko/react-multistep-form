@@ -1,32 +1,14 @@
-input {
+.info__input {
   display: block;
   margin-block-end: 1em;
   width: 100%;
-  height: 30px;
+  height: 40px;
+  padding-inline-start: 1em;
+  font-size: 16px;
+  border: 1px solid rgb(195, 193, 193);
 }
 
 label {
   color: hsl(213, 96%, 18%);
   font-size: 14px;
-}
-
-.info__wrapper {
-  max-width: 90vw;
-  min-height: 50vh;
-  background-color: #fff;
-  border-radius: 12px;
-  margin: 0 auto;
-  text-align: left;
-  position: relative;
-  top: -30px;
-  padding: 2em 1em;
-}
-
-.info__description {
-  margin-block: 1em;
-  color: hsl(231, 11%, 63%);
-}
-
-.info__header {
-  color: hsl(213, 96%, 18%);
 }

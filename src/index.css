@@ -25,3 +25,24 @@ body {
   font-size: 16px;
   background-color: hsl(217, 100%, 97%);
 }
+
+.step__wrapper {
+  max-width: 90vw;
+  min-height: 50vh;
+  background-color: #fff;
+  border-radius: 12px;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+  top: -30px;
+  padding: 2em 1em;
+}
+
+.step__description {
+  margin-block: 0.5em 1em;
+  color: hsl(231, 11%, 63%);
+}
+
+.step__header {
+  color: hsl(213, 96%, 18%);
+}
