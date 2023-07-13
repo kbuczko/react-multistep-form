@@ -1,6 +1,12 @@
-/* @media screen and (min-width: 576px) {
-  .StepperContainer-0-2-1 {
+@media screen and (min-width: 798px) {
+  #RFS-StepperContainer {
     flex-direction: column !important;
+    height: auto !important;
+    background-image: url("../images/bg-sidebar-desktop.svg") !important;
+  }
+  #RFS-StepContainer {
+    flex: 0;
+    margin-block-start: 1em;
   }
   #RFS-ConnectorContainer {
     display: none;
@@ -8,10 +14,15 @@
   main {
     display: flex;
   }
+  .step__wrapper {
+    top: 0px !important;
+  }
+  .stepper__nav {
+    position: relative !important;
+  }
 }
- */
 
-.StepperContainer-0-2-1 {
+#RFS-StepperContainer {
   min-width: 320px;
   height: 100px;
   background-image: url("../images/bg-sidebar-mobile.svg");
@@ -19,16 +30,13 @@
   background-size: cover;
 }
 
-.StepButton-0-2-4,
-.StepButton-d2-0-2-8.completed,
-.StepButton-d6-0-2-12.completed,
-.StepButton-d10-0-2-22.completed,
-.StepButton-d14-0-2-30.completed {
+#RFS-StepButton,
+#RFS-StepButton.completed {
   background-color: transparent !important;
   border: 1px solid white !important;
 }
 
-.StepButton-0-2-4.active {
+#RFS-StepButton.active {
   background-color: hsl(228, 100%, 84%) !important;
 }
 

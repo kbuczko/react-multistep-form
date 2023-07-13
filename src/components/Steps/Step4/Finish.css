@@ -27,3 +27,11 @@
 .finish__total {
   padding: 2em 1em 0 1em;
 }
+
+.plan__btn-change {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: gray;
+  text-decoration: underline;
+}

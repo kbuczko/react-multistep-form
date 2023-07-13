@@ -27,7 +27,8 @@ body {
 }
 
 .step__wrapper {
-  max-width: 90vw;
+  min-width: 320px;
+  max-width: 600px;
   min-height: 50vh;
   background-color: #fff;
   border-radius: 12px;
@@ -45,4 +46,11 @@ body {
 
 .step__header {
   color: hsl(213, 96%, 18%);
+}
+
+@media screen and (min-width: 800px) {
+  .step__wrapper {
+    min-width: 500px;
+    max-width: 600px;
+  }
 }

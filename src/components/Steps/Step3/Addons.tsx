@@ -1,45 +1,85 @@
+import {Addon} from "../../../models/Addon";
 import "./Addons.css";
 
-const Addons = () => {
+const Addons: React.FC<{
+  isConfirmed: boolean;
+  isYearlyPlan: boolean;
+  backToPreviousStep: () => void;
+  moveToNextStep: () => void;
+  addOns: Addon[];
+  onChangeAddons: (addon: Addon) => void;
+  selectedAddons: Addon[];
+}> = ({
+  isConfirmed,
+  isYearlyPlan,
+  backToPreviousStep,
+  moveToNextStep,
+  addOns,
+  onChangeAddons,
+  selectedAddons,
+}) => {
+  const handleFormSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    moveToNextStep();
+  };
+  const isCheckboxSelected = (box: Addon) => {
+    const foundRecord = selectedAddons.findIndex(
+      (addon) => addon.id === box.id
+    );
+    return foundRecord !== -1 ? true : false;
+  };
   return (
-    <section className="step__wrapper">
-      <h1 className="step__header">Pick add-ons</h1>
-      <p className="step__description">
-        Add-ons help enhance your gaming experience
-      </p>
-      <div id="checkboxes">
-        <label className="whatever" htmlFor="r1">
-          <input type="checkbox" name="rGroup" value="1" id="r1" />
-          <div>
-            <span className="d-block addon__title">Online service</span>
-            <span className="d-block addon__description">
-              Access to multiplayer games
-            </span>
-          </div>
-          <span className="addon__price">+$1/mo</span>
-        </label>
-        <label className="whatever" htmlFor="r2">
-          <input type="checkbox" name="rGroup" value="2" id="r2" />
-          <div>
-            <span className="d-block addon__title">Larger storage</span>
-            <span className="d-block addon__description">
-              Extra 1TB of cloud save
-            </span>
-          </div>
-          <span className="addon__price">+$2/mo</span>
-        </label>
-        <label className="whatever" htmlFor="r3">
-          <input type="checkbox" name="rGroup" value="3" id="r3" />
-          <div>
-            <span className="d-block addon__title">Customizable profile</span>
-            <span className="d-block addon__description">
-              Custom theme on your profile
-            </span>
-          </div>
-          <span className="addon__price">+$2/mo</span>
-        </label>
-      </div>
-    </section>
+    <form onSubmit={handleFormSubmit}>
+      <section className="step__wrapper">
+        <h1 className="step__header">Pick add-ons</h1>
+        <p className="step__description">
+          Add-ons help enhance your gaming experience
+        </p>
+        <div id="checkboxes">
+          {addOns.map((addon) => (
+            <label
+              className="checkbox__wrapper"
+              htmlFor={addon.id}
+              key={addon.id}
+            >
+              <input
+                type="checkbox"
+                name={addon.title}
+                value={addon.id}
+                id={addon.id}
+                onChange={() => onChangeAddons(addon)}
+                checked={isCheckboxSelected(addon)}
+              />
+              <div>
+                <span className="d-block addon__title">{addon.title}</span>
+                <span className="d-block addon__description">
+                  {addon.description}
+                </span>
+              </div>
+              <span className="addon__price">
+                +$
+                {isYearlyPlan
+                  ? `${addon.yearlyFee}/yr`
+                  : `${addon.monthlyFee}/mo`}
+              </span>
+            </label>
+          ))}
+        </div>
+      </section>
+      {!isConfirmed && (
+        <div className="stepper__nav">
+          <button
+            className="stepper__nav__back-btn"
+            onClick={backToPreviousStep}
+          >
+            Go Back
+          </button>
+          <button className="stepper__nav__btn" type="submit">
+            Next Step
+          </button>
+        </div>
+      )}
+    </form>
   );
 };
 

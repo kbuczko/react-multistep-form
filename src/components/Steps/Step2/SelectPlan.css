@@ -1,13 +1,14 @@
-.plan__wrapper {
+.plans__wrapper {
   display: flex;
+  cursor: pointer;
 }
 
-.plan__wrapper > input {
+.plans__wrapper > input {
   visibility: hidden;
   position: absolute;
 }
 
-.plan__wrapper > input:checked + div {
+.plans__wrapper > input:checked + div {
   background-color: hsl(217, 100%, 97%);
   border: 1px solid hsl(213, 96%, 18%);
 }
@@ -89,4 +90,16 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.active__billing {
+  color: hsl(213, 96%, 18%);
+}
+
+.inactive__billing {
+  color: gray;
+}
+
+#RFS-ConnectorContainer {
+  display: none;
 }

@@ -4,7 +4,9 @@ import FormStepper from "./components/FormStepper";
 function App() {
   return (
     <>
-      <FormStepper />
+      <div className="stepper__wrapper">
+        <FormStepper />
+      </div>
     </>
   );
 }

@@ -1,4 +1,4 @@
-.whatever {
+.checkbox__wrapper {
   display: flex;
   align-items: center;
   gap: 1.5em;
@@ -7,6 +7,7 @@
   padding: 1em;
   border: 1px solid gray;
   border-radius: 0.5em;
+  cursor: pointer;
 }
 
 .d-block {
